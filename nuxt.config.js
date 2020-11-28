@@ -1,6 +1,14 @@
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
+  dir: {
+  assets: 'assets',
+  layouts: 'commons',
+  middleware: 'middleware',
+  pages: 'templates',
+  static: 'static',
+  store: 'store'
+},
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -22,7 +30,8 @@ export default {
 
   styleResources: {
     scss: [
-      'assets/scss/_mixin.scss'
+      'assets/scss/_mixin.scss',
+      'assets/scss/_animation.scss'
     ]
   },
 

@@ -2,14 +2,15 @@
 <div>
   <header>
     <div class="nav-bar">
-      <logo class="logo" :logo="logo" />
+      <logo class="logo"/>
       <!-- モバイル版のみコンテクストメニューを表示 -->
-      <contextMenu :is_pc="is_pc" :is_opened="is_opened" @tapContext="tapContext" />
+      <contextMenu v-if="!is_pc" :is_opened="is_opened" @tapContext="tapContext" />
       <!-- ヘッダーのリンク-->
       <div class="link-buttons" :class="{opened: is_opened}">
         <ul>
-          <li v-for="link in nav_links">
-            <a :href="link.href" class="nav-button">{{ link.label }}</a>
+          <li v-for="link in $static.nav_links">
+            <btn :href="link.href" :label="link.label"
+                    class="nav-button"/>
           </li>
         </ul>
       </div>
@@ -24,40 +25,26 @@
 import scss_var from '../../assets/scss/_mixin.scss';
 import contextMenu from './parts/contextMenu';
 import logo from './parts/logo.vue'
+import btn from '~/organisms/molecules/atoms/button.vue';
 
 export default {
   components: {
     contextMenu,
     logo,
+    btn,
   },
 
   data() {
     return {
-      nav_links: [
-        //label => ヘッダーのリンクのテキスト　href => 飛ばしたい先のページURL
-        {
-          'label': 'HOME',
-          'href': '@/pages/index.vue'
-        },
-        {
-          'label': 'ACCESS',
-          'href': '@/pages/access.vue'
-        },
-      ],
-      logo: 'TEST LOGO',
       window_size: 0,
+      is_pc: true,
       is_opened: false,
     }
   },
 
-  computed: {
-    is_pc() {
-      return this.window_size >= 768; //768(px)は画面サイズのブレイクポイント
-    },
-  },
-
   mounted() {
     this.window_size = window.innerWidth;
+    this.is_pc = this.window_size >= 768; //768(px)は画面サイズのブレイクポイント
   },
 
   methods: {
@@ -78,35 +65,39 @@ a:visited {
 
 .nav-bar {
     width: 100vw;
-    height: 10vh;
+    height: $header_height;
     background-color: $header_background_color;
     color: $header_text_color;
     position: fixed;
+    z-index: 9000;
 }
 
 .logo {
-  margin-left: 10vh;
+  margin-left: $header_height;
   display: inline-block;
   text-align: center;
-  line-height: 10vh;
+  line-height: $header_height;
   position: absolute;
 }
 
 .link-buttons {
-  height: 10vh;
+  height: $header_height;
     }
 
 .nav-button {
   width: 10vw;
-  height: 10vh;
+  height: $header_height;
+  margin: 0 2vw;
+  position: relative;
   text-align: center;
   display: inline-block;
   vertical-align: middle;
+  z-index: 9001;
 }
 
 ul {
-  height: 10vh;
-  line-height: 10vh;
+  height: $header_height;
+  line-height: $header_height;
   display: flex;
   justify-content: flex-end;
 }
@@ -130,20 +121,19 @@ ul {
       margin-left: 25vw;
       display: inline-block;
       text-align: center;
-      line-height: 10vh;
+      line-height: $header_height;
       position: absolute;
     }
 
     ul {
-        margin-top: 10vh;
-        height: 10vh;
+        height: $header_height;
         line-height: 0;
         display: inline-block;
     }
 
     li {
         width: 70vw;
-        height: 10vh;
+        height: $header_height;
         text-align: center;
         display: list-item;
         position: relative;

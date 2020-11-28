@@ -9,5 +9,20 @@ $breakpoint: 768px;
 };
 
 //header
+$header_height: 10vh;
 $header_background_color: #333;
 $header_text_color: #ffffff;
+
+//footer
+$footer_height: 20vh;
+$footer_background_color: #333;
+$footer_text_color: #ffffff;
+
+//index
+$index_text_color: #ffffff;
+$hero_font_size: 24px;
+
+//SNS
+$sns_color: #cccccc;
+$sns_size: 5vh;
+$sns_margin: ($footer_height - $sns_size) / 2;

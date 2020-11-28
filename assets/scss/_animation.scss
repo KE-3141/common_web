@@ -1,0 +1,23 @@
+//トランジションの秒数
+@mixin for5s {
+  transition: all .5s;
+}
+
+@slideFrom(direction) {
+  @if direction == top {
+    transform: tranlateY(20px);
+  }
+  @else if direction == right {
+    transform: tranlateX(20px);
+  }
+  @if direction == bottom {
+    transform: tranlateY(-20px);
+  }
+  @if direction == left {
+    transform: tranlateX(-20px);
+  }
+}
+
+.fade {
+  opacity: 0;
+}

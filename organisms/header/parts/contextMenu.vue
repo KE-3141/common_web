@@ -1,6 +1,6 @@
 <template>
 <div>
-  <button v-if="!is_pc" @click="$emit('tapContext')">
+  <button @click="$emit('tapContext')">
     <font-awesome-icon v-if="!is_opened" icon="bars" />
     <font-awesome-icon v-if="is_opened" icon="times" />
   </button>
@@ -10,7 +10,6 @@
 <script>
 export default {
   props: {
-    is_pc: Boolean,
     is_opened: Boolean,
   }
 
