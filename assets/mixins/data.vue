@@ -33,7 +33,7 @@ export default {
 
     //index
       topText: {
-        'main': 'TEST MAIN TEXT',
+        'main': 'TEST MAIN',
         'sub': 'test sub text'
       },
 
@@ -43,7 +43,16 @@ export default {
         'href': '',
         'radialGradient': false,
       },
+
+      navs: [
+      'home',
+      'access',
+      'menu',
+      'staff',
+    ]
     }
+
+
     }
   },
 
