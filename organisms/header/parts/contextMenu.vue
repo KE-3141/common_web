@@ -1,6 +1,6 @@
 <template>
 <div>
-  <button @click="$emit('tapContext')">
+  <button @click="tapContext">
     <font-awesome-icon v-if="!is_opened" icon="bars" />
     <font-awesome-icon v-if="is_opened" icon="times" />
   </button>
@@ -11,6 +11,11 @@
 export default {
   props: {
     is_opened: Boolean,
+  },
+  methods: {
+    tapContext() {
+      this.$emit('tapContext');
+    }
   }
 
 }

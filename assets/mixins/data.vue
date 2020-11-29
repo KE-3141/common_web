@@ -8,7 +8,7 @@ export default {
     //header
       //トップ画面いっぱいに広がる画像、もしくは動画
       heroContents: {
-        'media': 'image', //img あるいは video
+        'type': 'image', //img あるいは video
         'paths': ['/images/test.jpg'], //videoなら必ず一つ。 imgで複数指定するとスライドショーになる。
       },
 
@@ -22,6 +22,10 @@ export default {
         {
           'label': 'ACCESS',
           'href': '@/templates/access.vue'
+        },
+        {
+          'label': 'MENU',
+          'href': '@/templates/menu.vue'
         },
       ],
 

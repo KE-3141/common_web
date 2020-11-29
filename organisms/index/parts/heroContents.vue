@@ -10,14 +10,14 @@
 </template>
 
 <script>
-import data from '@/assets/mixins/data.vue'
+import data from '@/assets/mixins/data.vue';
 export default{
   computed: {
     is_img() {
-      return this.$static.heroContents.media === 'image';
+      return this.$static.heroContents.type === 'image';
     },
     is_video() {
-      return this.$static.heroContents.media === 'video';
+      return this.$static.heroContents.type === 'video';
     }
   }
 
