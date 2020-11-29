@@ -12,6 +12,11 @@ export default {
     href: null,
     func: null,
   },
+  methods: {
+    changeColor() {
+      this.$emit('changeColor');
+    }
+  }
 }
 </script>
 

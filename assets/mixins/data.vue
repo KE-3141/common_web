@@ -49,9 +49,29 @@ export default {
       'access',
       'menu',
       'staff',
-    ]
+    ],
+    infos: [
+      { 
+        'label':'facebook',
+        'href': 'https://ja-jp.facebook.com'
+      },
+      {
+        'label':'twitter',
+        'href': 'https://ja-jp.facebook.com'
+      },
+      {
+        'label':'instagram',
+        'href': 'https://ja-jp.facebook.com'
+      },
+    ],
+    buttons: [
+      {
+        'label': 'button',
+      }
+    ],
     }
-
+    
+      
 
     }
   },

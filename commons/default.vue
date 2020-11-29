@@ -1,8 +1,8 @@
 <template>
   <div>
-    <test />
+    <commonHeader />
     <nuxt />
-    <commonFooter />
+    <test_footer/>
   </div>
 </template>
 
@@ -12,6 +12,7 @@ import test from '@/organisms/test/test.vue';
 import commonHeader from '@/organisms/header/commonHeader.vue';
 import commonFooter from '@/organisms/footer/commonFooter.vue';
 import index from '@/templates/index.vue';
+import test_footer from '@/organisms/footer/test_footer/test_footer.vue'
 
 export default {
   mixins: [static_data],
@@ -19,6 +20,7 @@ export default {
     commonHeader,
     commonFooter,
     test,
+    test_footer,
   },
 
   mounted(){
