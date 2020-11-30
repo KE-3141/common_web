@@ -1,10 +1,10 @@
 <template>
   <div>
     <footer>
-      <p :class='{clicked: isClicked}' :changeColor="isClicked">twitter</p>
-      <p :class='{clicked: isClicked}' :changeColor="isClicked">facebook</p>
-      <p :class='{clicked: isClicked}' :changeColor="isClicked">instagram</p>
-      <btn  @click="changeColor">ここをクリック</btn>
+      <p :class='{clicked: isClicked}'>twitter</p>
+      <p :class='{clicked: isClicked}'>facebook</p>
+      <p :class='{clicked: isClicked}'>instagram</p>
+      <btn :label="'ここクリック'" @click="changeColor"></btn>
     </footer>
   </div>
 </template>
@@ -13,7 +13,10 @@
 import btn from '@/organisms/molecules/atoms/button.vue'
 
 export default {
-  deta() {
+  components: {
+    btn,
+  },
+  data() {
     return {
       isClicked: false
     }

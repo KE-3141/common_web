@@ -2,7 +2,7 @@
   <div>
     <commonHeader />
     <nuxt />
-    <test_footer/>
+    <testFooter/>
   </div>
 </template>
 
@@ -11,14 +11,14 @@ import static_data from "@/assets/mixins/data.vue";
 import commonHeader from '@/organisms/header/commonHeader.vue';
 import commonFooter from '@/organisms/footer/commonFooter.vue';
 import index from '@/templates/index.vue';
-import test_footer from '../organisms/homework/test_footer';
+import testFooter from '../organisms/homework/testFooter';
 
 export default {
   mixins: [static_data],
   components: {
     commonHeader,
     commonFooter,
-    test_footer,
+    testFooter,
 
   },
 
