@@ -8,19 +8,23 @@ $breakpoint: 768px;
   }
 };
 
+$transparent: rgba(0,0,0,0);
+
 //header
 $header_height: 10vh;
 $header_background_color: #333;
-$header_text_color: #ffffff;
+$header_font_color: #ffffff;
 
 //footer
 $footer_height: 20vh;
 $footer_background_color: #333;
-$footer_text_color: #ffffff;
+$footer_font_color: #ffffff;
 
 //index
-$index_text_color: #ffffff;
-$hero_font_size: 24px;
+$index_top_font_color: #ffffff;
+$index_top_font_size: 24px;
+$index_message_height: 40vh;
+$index_message_text_align: center;
 
 //SNS
 $sns_color: #cccccc;

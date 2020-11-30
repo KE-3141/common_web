@@ -1,7 +1,7 @@
 <template>
 <div>
   <header>
-    <div class="nav-bar">
+    <div class="nav-bar scrolled">
       <logo class="logo"/>
       <!-- モバイル版のみコンテクストメニューを表示 -->
       <contextMenu v-if="!is_pc" :is_opened="is_opened" @tapContext="tapContext" />
@@ -24,7 +24,7 @@
 <script>
 import scss_var from '../../assets/scss/_mixin.scss';
 import contextMenu from './parts/contextMenu';
-import logo from './parts/logo.vue'
+import logo from './parts/logo.vue';
 import btn from '~/organisms/molecules/atoms/button.vue';
 
 export default {
@@ -60,16 +60,20 @@ a:active,
 a:hover,
 a:link,
 a:visited {
-    color: $header_text_color;
+    color: $header_font_color;
 }
 
 .nav-bar {
     width: 100vw;
     height: $header_height;
     background-color: $header_background_color;
-    color: $header_text_color;
+    color: $header_font_color;
     position: fixed;
     z-index: 9000;
+
+    &.scrolled {
+      background-color: $transparent;
+    }
 }
 
 .logo {

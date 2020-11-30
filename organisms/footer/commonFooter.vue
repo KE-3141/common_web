@@ -19,6 +19,6 @@ export default {
     width: 100vw;
     height: 20vh;
     background-color: $footer_background_color;
-    color: $footer_text_color;
+    color: $footer_font_color;
   }
 </style>

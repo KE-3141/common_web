@@ -40,12 +40,21 @@ export default {
         'main': 'TEST MAIN TEXT',
         'sub': 'test sub text'
       },
+      message: '本格インド料理を、こだわり抜いた食材を、全てのお客様に。',
 
     //SNS
       //インスタグラム
       instagram: {
         'href': '',
         'radialGradient': false,
+      },
+      //ツイッター
+      twitter: {
+        'href': '',
+      },
+      //facebook
+      facebook: {
+        'href': '',
       },
     }
     }
@@ -54,5 +63,20 @@ export default {
   created() {
     Vue.prototype.$static = this.static;
   },
+
+  //onScrollフックを作成
+  mounted () {
+    // Register onScroll event
+    if (!this.$options.onScroll) return
+    requestAnimationFrame(() => { // ページ遷移の際にVueRouterが実行するy=0へのスクロールを無視するための処理です
+      if (this._isDestroyed) return // この数フレームの間にコンポーネントが破棄される可能性を考慮しています
+      window.addEventListener('scroll', this.$options.onScroll)
+    })
+  },
+  destroyed () {
+    // Unregister onScroll event
+    if (!this.$options.onScroll) return
+    window.removeEventListener('scroll', this.$options.onScroll)
+  }
 }
 </script>

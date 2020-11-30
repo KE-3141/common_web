@@ -27,7 +27,7 @@ button {
     margin: 3.625vh;
     right: 0;
     position: absolute;
-    color: $header_text_color;
+    color: $header_font_color;
     z-index: 9000;
 }
 </style>

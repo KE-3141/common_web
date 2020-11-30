@@ -28,11 +28,11 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $index_text_color;
+    color: $index_top_font_color;
   }
   .main {
-    font-size: $hero_font_size;
-    line-height: $hero_font_size * 2;
+    font-size: $index_top_font_size;
+    line-height: $index_top_font_size * 2;
   }
 
   .sub {

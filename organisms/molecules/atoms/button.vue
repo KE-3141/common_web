@@ -1,7 +1,7 @@
 <template>
   <div class="btn">
     <NuxtLink :to="href" v-if="href">{{ label }}</NuxtLink>
-    <span @click="func" v-else>{{ label }}</span>
+    <span v-else>{{ label }}</span>
   </div>
 </template>
 
@@ -10,7 +10,6 @@ export default {
   props: {
     label: '',
     href: null,
-    func: null,
   },
 }
 </script>
