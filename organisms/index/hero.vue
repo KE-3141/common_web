@@ -18,8 +18,11 @@ export default {
 }
 </script>
 <style lang="scss">
+  .hero {
+    position: static;
+  }
   .heroContents {
-    position: absolute;
+    position: relative;
   }
 
 </style>

@@ -19,7 +19,6 @@ export default {
 
 <style lang='scss'>
   .index {
-    width: 100vw;
-    height: 100vh;
+
   }
 </style>
