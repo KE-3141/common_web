@@ -28,11 +28,11 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $index_top_font_color;
+    color: map-get(map-get($index, "top"), "font-color");
   }
   .main {
-    font-size: $index_top_font_size;
-    line-height: $index_top_font_size * 2;
+    font-size: map-get(map-get($index, "top"), "font-size");
+    line-height: map-get(map-get($index, "top"), "font-size") * 2;
   }
 
   .sub {

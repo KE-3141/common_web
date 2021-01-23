@@ -17,22 +17,22 @@ export default {
         //label => ヘッダーのリンクのテキスト　href => 飛ばしたい先のページURL
         {
           'label': 'HOME',
-          'href': '@/templates/index.vue'
+          'href': '~/design_parts/templates/index.vue'
         },
         {
           'label': 'ACCESS',
-          'href': '@/templates/access.vue'
+          'href': '~/design_parts/templates/access.vue'
         },
         {
           'label': 'MENU',
-          'href': '@/templates/menu.vue'
+          'href': '~/design_parts/templates/menu.vue'
         },
       ],
 
       //ロゴ情報
       logo: {
-        'type':     'text',　//text あるいは image
-        'content':  'TEST LOGO' //textなら文字、imgならパス
+        'type': 'svg',　//text, svg あるいは image
+        'content':  '/svg/logo.vue' //textなら文字、image, svgならパス
       },
 
     //index

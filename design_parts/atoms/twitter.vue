@@ -16,11 +16,11 @@
     fill: #1da1f2;
   }
   svg {
-    width: $sns_size * 1.6;
-    height: $sns_size * 1.6;
+    width: map-get($sns, "size") * 1.6;
+    height: map-get($sns, "size") * 1.6;
   }
   .sns_color {
-    stroke: $sns_color;
-    fill: $sns_color;
+    stroke: map-get($sns, "color");
+    fill: map-get($sns, "color");
   }
 </style>

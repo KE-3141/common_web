@@ -22,11 +22,11 @@ export default {
 
 <style lang="scss" scoped>
   svg {
-    width: $sns_size;
-    height: $sns_size;
+    width: map-get($sns, "size");
+    height: map-get($sns, "size");
   }
   .sns_color {
-    stroke: $sns_color;
-    fill: $sns_color;
+    stroke: map-get($sns, "color");
+    fill: map-get($sns, "color");
   }
 </style>

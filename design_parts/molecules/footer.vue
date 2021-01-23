@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import snsBar from '@/organisms/molecules/snsBar.vue';
+import snsBar from '~/design_parts/molecules/snsBar.vue';
 
 export default {
   components: {
@@ -18,7 +18,7 @@ export default {
   .footer {
     width: 100vw;
     height: 20vh;
-    background-color: $footer_background_color;
-    color: $footer_font_color;
+    background-color: map-get($footer, "background-color");
+    color: map-get($footer, "font-color");
   }
 </style>

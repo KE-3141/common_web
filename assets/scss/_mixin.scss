@@ -10,23 +10,37 @@ $breakpoint: 768px;
 
 $transparent: rgba(0,0,0,0);
 
-//header
-$header_height: 10vh;
-$header_background_color: #333;
-$header_font_color: #ffffff;
+$header: (
+  "height": 10vh,
+  "background-color": #333,
+  "font-color": #fff,
+);
 
-//footer
-$footer_height: 20vh;
-$footer_background_color: #333;
-$footer_font_color: #ffffff;
+$footer: (
+  "height": 20vh,
+  "background-color": #333,
+  "font-color": #fff,
+);
 
 //index
-$index_top_font_color: #ffffff;
-$index_top_font_size: 24px;
-$index_message_height: 40vh;
-$index_message_text_align: center;
+$index: (
+  "top": (
+    "font-color": #fff,
+    "font-size": 24px,
+  ),
+  "message": (
+    "height": 40vh,
+    "text-align": center,
+  ),
+);
 
-//SNS
-$sns_color: #cccccc;
-$sns_size: 5vh;
-$sns_margin: ($footer_height - $sns_size) / 2;
+$sns: (
+  "color": #ccc,
+  "size": 5vh,
+);
+
+$sns: (
+  "color": #ccc,
+  "size": 5vh,
+  "margin": (map-get($footer, "height") - map-get($sns, "size")) / 2,
+);

@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import heroContents from './parts/heroContents.vue';
-import topText from './parts/topText.vue';
+import heroContents from '~/design_parts/atoms/heroContents.vue';
+import topText from '~/design_parts/atoms/topText.vue';
 
 export default {
   components: {
@@ -19,7 +19,8 @@ export default {
 </script>
 <style lang="scss">
   .hero {
-    position: static;
+    width: 100vw;
+    height: 100vh;
   }
   .heroContents {
     position: relative;

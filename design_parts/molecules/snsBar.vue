@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import instagram from '@/organisms/molecules/atoms/instagram.vue';
-import twitter from '@/organisms/molecules/atoms/twitter.vue';
-import facebook from '@/organisms/molecules/atoms/facebook.vue';
+import instagram from '~/design_parts/atoms/instagram.vue';
+import twitter from '~/design_parts/atoms/twitter.vue';
+import facebook from '~/design_parts/atoms/facebook.vue';
 
 export default {
   components: {
@@ -22,12 +22,12 @@ export default {
 
 <style lang="scss" scoped>
 .instagram {
-  margin: $sns_margin;
+  margin: map-get($sns, "margin");
   position: relative;
   display: inline-block;
 }
 .twitter {
-  margin-right: $sns_margin;
+  margin-right: map-get($sns, "margin");
   position: relative;
   display: inline-block;
 }

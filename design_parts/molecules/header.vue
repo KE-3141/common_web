@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import scss_var from '../../assets/scss/_mixin.scss';
-import contextMenu from './parts/contextMenu';
-import logo from './parts/logo.vue';
-import btn from '~/organisms/molecules/atoms/button.vue';
+import scss_var from '~/assets/scss/_mixin.scss';
+import contextMenu from '~/design_parts/atoms/contextMenu';
+import logo from '~/design_parts/atoms/logo.vue';
+import btn from '~/design_parts/atoms/button.vue';
 
 export default {
   components: {
@@ -60,14 +60,14 @@ a:active,
 a:hover,
 a:link,
 a:visited {
-    color: $header_font_color;
+    color: map-get($header, "font-color");
 }
 
 .nav-bar {
     width: 100vw;
-    height: $header_height;
-    background-color: $header_background_color;
-    color: $header_font_color;
+    height: map-get($header, "height");
+    background-color: map-get($header, "background-color");
+    color: map-get($header, "font-color");
     position: fixed;
     z-index: 9000;
 
@@ -77,20 +77,20 @@ a:visited {
 }
 
 .logo {
-  margin-left: $header_height;
+  margin-left: map-get($header, "height");
   display: inline-block;
   text-align: center;
-  line-height: $header_height;
+  line-height: map-get($header, "height");
   position: absolute;
 }
 
 .link-buttons {
-  height: $header_height;
+  height: map-get($header, "height");
     }
 
 .nav-button {
   width: 10vw;
-  height: $header_height;
+  height: map-get($header, "height");
   margin: 0 2vw;
   position: relative;
   text-align: center;
@@ -100,8 +100,8 @@ a:visited {
 }
 
 ul {
-  height: $header_height;
-  line-height: $header_height;
+  height: map-get($header, "height");
+  line-height: map-get($header, "height");
   display: flex;
   justify-content: flex-end;
 }
@@ -125,19 +125,19 @@ ul {
       margin-left: 25vw;
       display: inline-block;
       text-align: center;
-      line-height: $header_height;
+      line-height: map-get($header, "height");
       position: absolute;
     }
 
     ul {
-        height: $header_height;
+        height: map-get($header, "height");
         line-height: 0;
         display: inline-block;
     }
 
     li {
         width: 70vw;
-        height: $header_height;
+        height: map-get($header, "height");
         text-align: center;
         display: list-item;
         position: relative;

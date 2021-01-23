@@ -8,11 +8,11 @@
 
 <style lang="scss" scoped>
 svg {
-  width: $sns_size * 0.9;
-  height: $sns_size * 0.9;
+  width: map-get($sns, "size") * 0.9;
+  height: map-get($sns, "size") * 0.9;
 }
 .sns_color {
-  stroke: $sns_color;
-  fill: $sns_color;
+  stroke: map-get($sns, "color");
+  fill: map-get($sns, "color");
 }
 </style>

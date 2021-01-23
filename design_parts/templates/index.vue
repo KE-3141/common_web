@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import hero from '@/organisms/index/hero.vue';
-import message from '@/organisms/index/message.vue';
+import hero from '../organisms/hero.vue';
+import message from '../atoms/message.vue';
 
 export default {
   components: {
@@ -19,6 +19,7 @@ export default {
 
 <style lang='scss'>
   .index {
-
+    width: 100vw;
+    min-height: 100vh;
   }
 </style>
