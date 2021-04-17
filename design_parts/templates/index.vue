@@ -1,32 +1,21 @@
 <template>
 <div class="index">
-  <hero />
-  <message :location="'index'" :index="0"/>
-  <concept />
-  <topMenu />
-  <location />
+  <concept_message />
 </div>
 </template>
 
 <script>
-import hero from '../organisms/hero.vue';
-import message from '../molecules/message.vue';
-import concept from '../original/concept.vue';
-import topMenu from '../original/top_menu.vue';
-import location from '../original/location.vue';
+import concept_message from '../molecules/concept_message';
 
 export default {
   components: {
-    hero,
-    message,
-    concept,
-    topMenu,
-    location,
+    concept_message
   }
 }
 </script>
 
-<style lang='scss'>
+<style 
+    Concept_imagelang='scss'>
   .index {
     width: 100vw;
     min-height: 100vh;
