@@ -90,16 +90,22 @@ $heading: (
   font-style: normal;
 }
 
+.cezanne {
+  font-family: fot-cezanne-pron, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .button-font {
   @extend .Trajan;
 }
 
 body {
-  @extend .Ryumin;
+  @extend .cezanne;
   background-color: #eee;
   letter-spacing: $letter_spacing_read;
   line-height: 4em;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 %centering {
