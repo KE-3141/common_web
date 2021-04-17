@@ -1,6 +1,9 @@
 <template>
   <div class="concept_message">
     <div class="text">
+      <p class="heading">
+        新ビジネス、カッコつけたい。
+      </p>
       <p>
         せっかくの船出は、やっぱりカッコいいデザインでキメていきたいところ。
       </p>
@@ -25,25 +28,55 @@ export default {
   }
 </script>
 
-
 <style lang="scss" scoped>
   .concept_message {
+    display: flex;
+    text-align: left;
     height: 100vh;
-  }
-  .text {
-    margin: 10vh 10vw 0 10vw;
-    text-align: center;
-  }
-  .svg {
-    height: 40vh;
-    width: 100vw;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
+    // background-color: #59b9c6;
+    // color: #fff;
   }
 
-  .image {
+  .text {
+    margin: 25vh 5vw 0 10vw;
+    vertical-align: middle;
+  }
+
+  .heading {
+    margin-bottom: 1rem;
+    font-size: 30px;
+  }
+
+  .svg {
+    margin: 0 10vw 0 5vw;
+  }
+
+  svg {
     height: 100%;
     width: 100%;
   }
+
+  @include screen-mobile {
+      .concept_message {
+        height: 100vh;
+        position: relative;
+      }
+      .text {
+        height: 50vh;
+        text-align: center;
+        margin: 10vh 10vw 0;
+        padding: 1rem;
+        overflow-wrap: break-word;
+      }
+    
+      .svg {
+        text-align: center;
+        height: 30vh;
+        width: 100vw;
+        margin-bottom: 20px;
+        position: absolute;
+        bottom: 0;
+      }
+  }
+
 </style>

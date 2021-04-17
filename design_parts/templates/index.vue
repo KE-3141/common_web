@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import concept_message from '../molecules/concept_message';
+import concept_message from '../molecules/concept_message.vue'
 
 export default {
   components: {
-    concept_message
+    concept_message,
   }
 }
 </script>
