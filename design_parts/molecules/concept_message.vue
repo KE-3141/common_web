@@ -25,15 +25,28 @@ export default {
 <style lang="scss" scoped>
   .concept_message {
     height: 100vh;
+    position: relative;
   }
   .text {
-    margin: 10vh 10vw 0 10vw;
+    height: 50vh;
+    background-color: #fff;
     text-align: center;
-    background-color: pink;
+    margin: 10vh 10vw 0;
+    padding: 1rem;
+    overflow-wrap: break-word;
   }
+
   .svg {
-    height: 40vh;
     text-align: center;
-    background-color: red;
+    height: 35vh;
+    width: 100vw;
+    margin-bottom: 20px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
   }
 </style>
