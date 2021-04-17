@@ -9,6 +9,9 @@
 </template>
 
 <style lang="scss" scoped>
+  .twitter {
+    transform: translateY(10%);
+  }
   .cls-1 {
     fill: none;
   }

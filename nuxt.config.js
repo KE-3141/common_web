@@ -5,22 +5,24 @@ export default {
   assets: 'assets',
   layouts: 'commons',
   middleware: 'middleware',
-  pages: 'templates',
+  pages: 'design_parts/templates',
   static: 'static',
-  store: 'store'
+  store: 'store',
+  generate: 'nuxt generate',
 },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'common_web',
+    title: 'スーリヤ　インド料理店',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://use.typekit.net/nsy3xjl.css', }
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -37,6 +39,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    '~plugins/scroll.js',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -48,8 +51,6 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
@@ -58,6 +59,8 @@ export default {
     '@nuxtjs/style-resources',
     //アイコン
     'nuxt-fontawesome',
+    //SVGをコンポーネントとして使える
+    'nuxt-svg-loader',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

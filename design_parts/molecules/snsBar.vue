@@ -22,7 +22,7 @@ export default {
 
 <style lang="scss" scoped>
 .instagram {
-  margin: map-get($sns, "margin");
+  margin: 0 map-get($sns, "margin");
   position: relative;
   display: inline-block;
 }

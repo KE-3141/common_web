@@ -28,6 +28,6 @@ button {
     right: 0;
     position: absolute;
     color: map-get($header, "font-color");
-    z-index: 9000;
+    z-index: 10001;
 }
 </style>

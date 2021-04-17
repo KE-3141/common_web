@@ -8,39 +8,102 @@ $breakpoint: 768px;
   }
 };
 
-$transparent: rgba(0,0,0,0);
+@import '_animation.scss';
 
-$header: (
-  "height": 10vh,
-  "background-color": #333,
-  "font-color": #fff,
+$transparent: rgba(0, 0, 0, 0);
+$margin_x: 10vw;
+$margin_y: 10vh;
+$letter_spacing: 0.5em;
+$letter_spacing_read: 0.2em;
+$jump_rate: 150%;
+
+$red: #c13a1e;
+$yellow: #cfac00;
+
+
+$button: (
+  "transition": .7s,
+  "radius": 10px,
 );
 
-$footer: (
-  "height": 20vh,
-  "background-color": #333,
-  "font-color": #fff,
+$header: ("height": 10vh,
+  "background-color-first": $transparent,
+  "background-color": #eee,
+  "font-color-first": #eee,
+  "font-color": #333,
 );
 
-//index
+$footer: ("height": 20vh,
+  "background-color": #382E07,
+  "font-color": #eee,
+);
+
+$top: (
+  "height": 15vh, //ロゴを表示する場合の高さ
+  "font-size": 22px,
+  "font-color": #eee
+);
+
 $index: (
-  "top": (
-    "font-color": #fff,
-    "font-size": 24px,
-  ),
-  "message": (
-    "height": 40vh,
-    "text-align": center,
-  ),
+    "font-color": #333,
 );
 
-$sns: (
-  "color": #ccc,
+$sns: ("color": #ccc,
   "size": 5vh,
 );
 
-$sns: (
-  "color": #ccc,
+$sns: ("color": #ccc,
   "size": 5vh,
   "margin": (map-get($footer, "height") - map-get($sns, "size")) / 2,
 );
+
+$message: ("height": 40vh,
+"text-align": center,
+"header-to-main": 2em,
+);
+
+$heading: (
+
+);
+
+.full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.Trajan {
+  font-family: trajan-pro-3, serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.Ryumin {
+  font-family: a-otf-ryumin-pr6n, serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.lamar {
+  font-family: lamar-pen, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.button-font {
+  @extend .Trajan;
+}
+
+body {
+  @extend .Ryumin;
+  background-color: #eee;
+  letter-spacing: $letter_spacing_read;
+  line-height: 4em;
+  font-size: 13px;
+}
+
+%centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

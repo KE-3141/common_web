@@ -1,23 +1,39 @@
+$transition: 1.5s;
+$slide_px: 40px;
+
 //トランジションの秒数
-@mixin for5s {
-  transition: all .5s;
+.transition {
+  transition: all $transition;
 }
 
-@slideFrom(direction) {
-  @if direction == top {
-    transform: tranlateY(20px);
+  @function slideFrom($direction) {
+  @if $direction == top {
+    @return translateY($slide_px * -1);
   }
-  @else if direction == right {
-    transform: tranlateX(20px);
+  @else if $direction == right {
+    @return translateX($slide_px);
   }
-  @if direction == bottom {
-    transform: tranlateY(-20px);
+  @if $direction == bottom {
+    @return  translateY($slide_px);
   }
-  @if direction == left {
-    transform: tranlateX(-20px);
+  @if $direction == left {
+    @return translateX($slide_px * -1);
   }
 }
 
 .fade {
+  @extend .transition;
   opacity: 0;
+  transform: slideFrom(bottom);
+
+  &.is_scrolled {
+    @extend .transition;
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.button_hovered {
+  font-size: 120%;
+  color: #cfac00;
 }

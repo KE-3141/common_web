@@ -10,7 +10,7 @@ import snsBar from '~/design_parts/molecules/snsBar.vue';
 export default {
   components: {
     snsBar,
-  }
+  },
 }
 </script>
 
@@ -20,5 +20,7 @@ export default {
     height: 20vh;
     background-color: map-get($footer, "background-color");
     color: map-get($footer, "font-color");
+    display: flex;
+    align-items: center;
   }
 </style>

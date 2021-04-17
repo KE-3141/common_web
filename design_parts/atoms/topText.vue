@@ -1,24 +1,35 @@
 <template>
   <div class="topText">
-    <div>
-      <p class="main">
+      <logo v-if="$static.topText.logo" :is_top="true" />
+
+      <p v-else class="main">
         {{ $static.topText.main }}
       </p>
-      <p class="sub">
+
+      <p class="sub" :class="logo_sub">
         {{ $static.topText.sub }}
       </p>
-    </div>
   </div>
 </template>
 
 <script>
+import logo from './logo.vue';
 
 export default {
-
-}
+  components: {
+    logo,
+  },
+  computed: {
+    logo_sub() {
+      return {
+        logo_sub: this.$static.topText.logo,
+      }
+    }
+  },
+};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .topText {
     width: 50vw;
     height: 50vh;
@@ -28,14 +39,31 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: map-get(map-get($index, "top"), "font-color");
+    color: map-get($top, "font-color");
+    fill: map-get($top, "font-color");
+    stroke: map-get($top, "font-color");
   }
   .main {
-    font-size: map-get(map-get($index, "top"), "font-size");
-    line-height: map-get(map-get($index, "top"), "font-size") * 2;
+    font-size: map-get($top, "font-size");
+    line-height: map-get($top, "font-size") * 2;
   }
 
   .sub {
-    font-size: 12px;
+    font-size: map-get($top, "font-size") / 2;
+    letter-spacing: $letter_spacing;
+  }
+
+  .logo_sub {
+    transform: translateY(map-get($top, "height"));
+  }
+
+  .logo {
+    margin-left: 0;
+    display: inline-block;
+    text-align: center;
+    line-height: 1em;
+    position: absolute;
+    fill: map-get($top, "font-color");
+    z-index: 8000;
   }
 </style>

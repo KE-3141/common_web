@@ -8,7 +8,7 @@
   </div>
 
   <div class="logo" v-else-if="$static.logo.type=='svg'">
-    <svg :xlms="$static.logo.content" alt="logo" />
+    <logo_svg :is_header="is_header" :is_top="is_top" />
   </div>
 </template>
 
@@ -19,5 +19,9 @@ export default {
   components: {
     logo_svg,
   },
+  props: {
+    is_header: Boolean,
+    is_top: Boolean,
+  }
 }
 </script>
