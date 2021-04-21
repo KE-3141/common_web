@@ -1,18 +1,18 @@
 <template>
-  <div v-scroll="handleScroll" class="heading" :class="[scrolled_animation, h_type]">
+  <div class="heading" :class="[h_type]">
     <p>
-      {{ heading }}
+      <span class="text-chunk" v-for="chunk in heading">
+        {{ chunk }}
+      </span>
     </p>
   </div>
 </template>
 
 <script>
-import scroll_trigger from '~/assets/mixins/scroll_trigger.vue';
 
 export default {
-  mixins: [scroll_trigger],
   props: {
-    heading: String,
+    heading: Array,
     type: String,
   },
   computed: {
@@ -28,5 +28,9 @@ export default {
   .heading {
     font-size: $jump_rate;
     letter-spacing: $letter_spacing;
+  }
+
+  .text-chunk {
+    display: inline-block;
   }
 </style>

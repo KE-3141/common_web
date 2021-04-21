@@ -41,6 +41,7 @@ export default {
   plugins: [
     '~plugins/scroll.js',
     '~/plugins/adobe_fonts.js',
+    '~/plugins/aos.js',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

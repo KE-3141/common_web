@@ -1,9 +1,7 @@
 <template>
   <div class="concept_message">
     <div class="text">
-      <p class="heading">
-        新ビジネス、カッコつけたい。
-      </p>
+      <heading :heading="heading" />
       <p>
         せっかくの船出は、やっぱりカッコいいデザインでキメていきたいところ。
       </p>
@@ -20,11 +18,19 @@
 
 <script>
 import svg_image from '../atoms/svg_image';
+import heading from '../atoms/heading';
 
 export default {
   components: {
     svg_image,
+    heading,
   },
+
+  data() {
+    return {
+      heading: ["新ビジネス、", "カッコ", "つけたい。"],
+    }
+  }
   }
 </script>
 
@@ -68,7 +74,7 @@ export default {
         padding: 1rem;
         overflow-wrap: break-word;
       }
-    
+
       .svg {
         text-align: center;
         height: 30vh;
