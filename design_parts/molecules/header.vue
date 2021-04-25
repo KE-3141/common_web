@@ -9,7 +9,7 @@
             <div class="link-buttons" :class="{opened: is_opened}">
                 <ul>
                     <li v-for="(link, i) in $static.nav_links" :key="i">
-                        <btn :href="link.href" :label="link.label" class="nav-button" />
+                        <btn v-scroll-to="'#' + link.label" to :label="link.label" class="nav-button" />
                     </li>
                 </ul>
             </div>

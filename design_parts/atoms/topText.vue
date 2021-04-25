@@ -1,20 +1,22 @@
 <template>
   <div class="topText">
+    <span class="text-box">
       <logo v-if="$static.topText.logo" :is_top="true" />
 
-      <p v-else class="main">
+      <p v-else class="main" data-aos="flip-up" data-aos-duration="500">
         <span v-for="text in $static.topText.main">
         {{ text }}
         <br>
         </span>
       </p>
       <span class="line" />
-      <p class="sub" :class="logo_sub">
+      <p class="sub" :class="logo_sub" data-aos="flip-up" data-aos-duration="500" data-aos-delay="300">
         <span v-for="text in $static.topText.sub">
         {{ text }}
         <br>
         </span>
       </p>
+    </span>
   </div>
 </template>
 
@@ -37,20 +39,19 @@ export default {
 
 <style lang="scss" scoped>
   .topText {
-    width: map-get($topText, "width") - 10vw;
+    width: map-get($topText, "width");
     position: absolute;
     text-align: map-get($top, "text-align");
     color: map-get($top, "font-color");
     fill: map-get($top, "font-color");
     stroke: map-get($top, "font-color");
-    display: flex;
-    justify-content: center;
-    align-items: end;
+    @extend %centering;
     flex-direction: column;
   }
   .main {
     font-size: map-get($top, "font-size");
     line-height: map-get($top, "font-size") * 2;
+    font-weight: bold;
   }
 
   .sub {

@@ -2,7 +2,6 @@
   <div>
     <commonHeader />
     <nuxt />
-    <commonFooter />
   </div>
 </template>
 

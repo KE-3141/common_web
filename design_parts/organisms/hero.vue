@@ -31,7 +31,7 @@ export default {
     width: map-get($topText, "width");
     height: 100vh;
     @extend %centering;
-    align-items: self-end;
+    align-items: start;
   }
 
 </style>
