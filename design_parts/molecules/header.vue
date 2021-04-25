@@ -9,7 +9,9 @@
             <div class="link-buttons" :class="{opened: is_opened}">
                 <ul>
                     <li v-for="(link, i) in $static.nav_links" :key="i">
-                        <btn v-scroll-to="'#' + link.label" to :label="link.label" class="nav-button" />
+                        <nuxt-link v-scroll-to="'#' + link.label" to :label="link.label" class="nav-button">
+                          {{ link.label }}
+                        </nuxt-link>
                     </li>
                 </ul>
             </div>
