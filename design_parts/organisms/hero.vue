@@ -1,7 +1,9 @@
 <template>
   <div class="hero">
     <heroContents />
-    <topText />
+    <div class="topText">
+      <topText />
+    </div>
   </div>
 </template>
 
@@ -24,6 +26,12 @@ export default {
   }
   .heroContents {
     position: relative;
+  }
+  .topText {
+    width: map-get($topText, "width");
+    height: 100vh;
+    @extend %centering;
+    align-items: self-end;
   }
 
 </style>

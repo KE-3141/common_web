@@ -1,20 +1,23 @@
 <template>
 <div class="index">
+  <hero id="#HOME"/>
   <concept_message />
 </div>
 </template>
 
 <script>
+import hero from '../organisms/hero';
 import concept_message from '../molecules/concept_message.vue'
 
 export default {
   components: {
+    hero,
     concept_message,
   }
 }
 </script>
 
-<style 
+<style
     Concept_imagelang='scss'>
   .index {
     width: 100vw;

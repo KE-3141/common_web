@@ -11,7 +11,7 @@ export default {
                 heroContents: {
                     'type': 'video', //img あるいは video
                     'paths': ['/videos/TEST_SURYA.mp4'], //videoなら必ず一つ。 imgで複数指定するとスライドショーになる。
-                    'overlay': true,
+                    'overlay': false,
                 },
 
                 //グローバルナビゲーションのラベルとパス情報
@@ -22,12 +22,16 @@ export default {
                         'href': '~/design_parts/templates/index.vue'
                     },
                     {
-                        'label': 'ACCESS',
+                        'label': 'ABOUT',
                         'href': '~/design_parts/templates/access.vue'
                     },
                     {
-                        'label': 'MENU',
+                        'label': 'PACKS',
                         'href': '~/design_parts/templates/menu.vue'
+                    },
+                    {
+                        'label': 'CONTACT',
+                        'href': '~/design_parts/templates/contact.vue'
                     },
                 ],
 
@@ -39,24 +43,26 @@ export default {
 
                 //index
                 topText: {
-                    'main': 'TEST MAIN TEXT',
-                    'logo': true, //trueならmainは無視される
-                    'sub': '都内の本格インド料理店',
+                    'main': ['あなたのビジネス、スグにスタート'],
+                    'logo': false, //trueならmainは無視される
+                    'sub': ['ロゴも、サイトも、ぜんぶおまかせ。', 'まとめてパックの安心価格。'],
                 },
 
                 //第一階層: メッセージを載せるページ
                 //見出しか本文か
-                message: {
-                    'index': {
+                message: [
+                    {
                         'heading': [
-                            '本格インド料理を こだわり抜いた食材を 全てのお客様に'
+                            '新ビジネス、カッコつけたい。'
                         ],
                         'main_text': [
-                            '1999年創業以来、私たちは、みなさまに愉しんでいただけるインド料理を磨き上げてきました。\n世界中のだれもが笑顔になれる料理をご提供するために、今日も明日も、明後日も。\nSURYAはいつでもお待ちしております。 \n\n店主 バンダーリ・ビジャイ',
+                            'せっかくの船出は、やっぱりカッコいいデザインでキメていきたいところ。',
+                            'スグスタなら、あなたの名刺からロゴ、ウェブサイトに至るまで、',
+                            'ビジネスのスタートに必要なデザインをトータルコーディネートします。',
                         ],
                     } //index,
 
-                },
+                ],
 
                 //SNS
                 //インスタグラム

@@ -1,5 +1,6 @@
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
+  ssr: false,
   target: 'static',
   dir: {
   assets: 'assets',
@@ -13,7 +14,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'スーリヤ　インド料理店',
+    title: 'スグスタ',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

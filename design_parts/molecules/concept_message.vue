@@ -39,8 +39,6 @@ export default {
     display: flex;
     text-align: left;
     height: 100vh;
-    // background-color: #59b9c6;
-    // color: #fff;
   }
 
   .text {

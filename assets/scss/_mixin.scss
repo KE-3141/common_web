@@ -14,7 +14,7 @@ $transparent: rgba(0, 0, 0, 0);
 $margin_x: 10vw;
 $margin_y: 10vh;
 $letter_spacing: 0.5em;
-$letter_spacing_read: 0.2em;
+$letter_spacing_read: 0.4em;
 $jump_rate: 150%;
 
 $red: #c13a1e;
@@ -27,10 +27,10 @@ $button: (
 );
 
 $header: ("height": 10vh,
-  "background-color-first": $transparent,
-  "background-color": #eee,
-  "font-color-first": #eee,
-  "font-color": #333,
+  "background-color-first": #fff,
+  "background-color": #fff,
+  "font-color-first": #000,
+  "font-color": #000,
 );
 
 $footer: ("height": 20vh,
@@ -41,7 +41,12 @@ $footer: ("height": 20vh,
 $top: (
   "height": 15vh, //ロゴを表示する場合の高さ
   "font-size": 22px,
-  "font-color": #eee
+  "font-color": #000,
+  "text-align": left,
+);
+
+$topText: (
+  "width": 50vw,
 );
 
 $index: (
@@ -97,12 +102,12 @@ $heading: (
 }
 
 .button-font {
-  @extend .Trajan;
+  @extend .cezanne;
 }
 
 body {
   @extend .cezanne;
-  background-color: #eee;
+  background-color: #fff;
   letter-spacing: $letter_spacing_read;
   line-height: 4em;
   font-size: 12px;
