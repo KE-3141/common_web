@@ -38,7 +38,7 @@ export default {
   }
 }
 .cls-1 {
-  fill:none;
+
   stroke-miterlimit:10;
 }
 

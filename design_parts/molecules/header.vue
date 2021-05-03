@@ -2,14 +2,16 @@
 <div>
     <header>
         <div class="nav-bar" :class="[is_on_hero, {is_logo_at_center: is_logo_at_center}]" v-scroll="handleScroll">
-            <logo class="logo" :is_header="true" />
+          <span class="logo-area">
+            <svg_element v-scroll-to="'#HOME'" to class="logo" name="logo.svg" data-aos="flip-up" />
+          </span>
             <!-- モバイル版のみコンテクストメニューを表示 -->
             <contextMenu v-if="!is_pc" :is_opened="is_opened" @tapContext="tapContext" />
             <!-- ヘッダーのリンク-->
             <div class="link-buttons" :class="{opened: is_opened}">
                 <ul>
-                    <li v-for="(link, i) in $static.nav_links" :key="i">
-                        <nuxt-link v-scroll-to="'#' + link.label" to :label="link.label" class="nav-button">
+                    <li v-for="(link, i) in $static.nav_links" :key="i" @click="is_opened = false">
+                        <nuxt-link v-scroll-to="'#' + link.label" to :label="link.label" class="nav-button" data-aos="flip-up" :data-aos-delay="800 + (i * 100)">
                           {{ link.label }}
                         </nuxt-link>
                     </li>
@@ -26,12 +28,14 @@
 import scss_var from '~/assets/scss/_mixin.scss';
 import contextMenu from '~/design_parts/atoms/contextMenu';
 import logo from '~/design_parts/atoms/logo.vue';
+import svg_element from '~/design_parts/atoms/svg_element';
 import btn from '~/design_parts/atoms/button.vue';
 
 export default {
     components: {
         contextMenu,
         logo,
+        svg_element,
         btn,
     },
 
@@ -77,6 +81,10 @@ export default {
 </script>
 
 <style lang="scss">
+header {
+  overflow: hidden;
+}
+
 a:active,
 a:hover,
 a:link,
@@ -97,6 +105,8 @@ a:visited {
 }
 
 .logo {
+    height: map-get($header, "height") / 2;
+    margin-top: map-get($header, "height") / 4;
     margin-left: map-get($header, "height");
     display: inline-block;
     text-align: center;
@@ -104,6 +114,7 @@ a:visited {
     position: absolute;
     //fill: map-get($header, "font-color");
     z-index: 9000;
+    cursor: pointer;
 }
 
 .link-buttons {
@@ -164,9 +175,19 @@ ul {
         transform: translateX(30vw);
     }
 
+    .logo-area {
+      width: 100vw;
+      height: map-get($header, "height");
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .logo {
-        width: 50vw;
-        margin-left: 25vw;
+        height: map-get($header, "height") / 4;
+        width: auto;
+        margin: 0;
         display: inline-block;
         text-align: center;
         line-height: map-get($header, "height");

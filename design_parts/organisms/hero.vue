@@ -29,9 +29,15 @@ export default {
   }
   .topText {
     width: map-get($topText, "width");
-    height: 100vh;
+    min-height: 100vh;
     @extend %centering;
     align-items: start;
   }
+
+@include screen-mobile {
+  .topText {
+    width: 100vw;
+  }
+}
 
 </style>

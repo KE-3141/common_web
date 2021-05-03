@@ -21,7 +21,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
       { rel: 'stylesheet', href: 'https://use.typekit.net/nsy3xjl.css', }
     ],
   },
@@ -41,9 +41,9 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '~plugins/scroll.js',
-    '~/plugins/adobe_fonts.js',
-    '~/plugins/aos.js',
-    '~/plugins/v-scroll-to.js',
+    '~plugins/adobe_fonts.js',
+    '~plugins/aos.js',
+    '~plugins/vue-scrollto.js',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

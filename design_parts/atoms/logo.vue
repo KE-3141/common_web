@@ -25,3 +25,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .logo {
+    height: 10vh;
+    width: 10vh;
+    @extend %centering;
+  }
+</style>

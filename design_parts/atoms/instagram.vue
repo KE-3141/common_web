@@ -1,5 +1,5 @@
 <template>
-  <div class="instagram" @click="$router.push($static.instagram.href)">
+  <div class="instagram" @click="externalLink($static.instagram.href)">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2500 2500" width="500" height="500">
       <defs v-if="$static.instagram.radialGradient">
         <radialGradient id="0" cx="332.14" cy="2511.81" r="3263.54" gradientUnits="userSpaceOnUse">
@@ -17,6 +17,11 @@
 
 <script>
 export default {
+  methods: {
+    externalLink(url) {
+      window.location.href = url;
+    }
+  }
 }
 </script>
 

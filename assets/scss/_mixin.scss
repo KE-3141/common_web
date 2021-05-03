@@ -34,8 +34,8 @@ $header: ("height": 10vh,
 );
 
 $footer: ("height": 20vh,
-  "background-color": #382E07,
-  "font-color": #eee,
+  "background-color": #eee,
+  "font-color": #000,
 );
 
 $top: (
@@ -110,11 +110,19 @@ body {
   background-color: #fff;
   letter-spacing: $letter_spacing_read;
   line-height: 4em;
-  font-size: 12px;
+  font-size: 14px;
+  overflow-x: hidden;
 }
 
 %centering {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@include screen-mobile {
+  body {
+    font-size: 12px;
+    line-height: 2.5em;
+  }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="gate">
     <commonHeader />
     <nuxt />
   </div>
@@ -17,13 +17,8 @@ export default {
     commonHeader,
     commonFooter,
   },
-
-  mounted(){
-    console.log(this.$static);
-  }
 }
 </script>
 
 <style lang="scss">
-
 </style>
